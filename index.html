@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>能力有限公司 - AI原生内容营销先锋 | nengli.tv</title>
+    <title>能力有限公司 - AI时代品牌及IP世界构建商 | Nengli.World</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,6 +17,8 @@
             --purple: #8e44ad;
             --dark: #0a0a0a;
             --card-bg: rgba(26, 32, 44, 0.7);
+            --infinite-purple: #6366f1;
+            --infinite-cyan: #06b6d4;
         }
         
         body {
@@ -26,10 +28,11 @@
             overflow-x: hidden;
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(247, 147, 30, 0.15) 0%, transparent 20%);
+                radial-gradient(circle at 90% 80%, rgba(247, 147, 30, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 30%);
         }
         
-        /* 高级Logo设计 */
+        /* 进化版Logo设计 */
         .logo-container {
             position: relative;
             display: flex;
@@ -42,18 +45,19 @@
             height: 48px;
             position: relative;
             margin-right: 12px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), var(--infinite-purple));
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
             transition: all 0.3s ease;
+            overflow: hidden;
         }
         
         .logo-icon:hover {
             transform: rotate(5deg) scale(1.1);
-            box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.7);
         }
         
         .logo-icon::before {
@@ -63,19 +67,21 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, var(--primary), var(--accent), var(--secondary));
+            background: linear-gradient(45deg, var(--primary), var(--infinite-purple), var(--infinite-cyan), var(--accent));
             border-radius: 14px;
             z-index: -1;
-            opacity: 0.7;
-            animation: logoGlow 3s ease-in-out infinite alternate;
+            opacity: 0.8;
+            animation: infiniteGlow 4s ease-in-out infinite alternate;
         }
         
         .logo-symbol {
             font-size: 24px;
             font-weight: 900;
-            color: #000;
-            text-shadow: none;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
             font-family: 'Orbitron', sans-serif;
+            position: relative;
+            z-index: 1;
         }
         
         .logo-text {
@@ -87,7 +93,7 @@
         .logo-main {
             font-size: 28px;
             font-weight: 800;
-            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+            background: linear-gradient(90deg, var(--primary), var(--infinite-purple), var(--infinite-cyan));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -96,35 +102,35 @@
         }
         
         .logo-sub {
-            font-size: 11px;
+            font-size: 9px;
             font-weight: 600;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--accent);
+            color: var(--infinite-cyan);
             opacity: 0.9;
             font-family: 'Orbitron', sans-serif;
         }
         
-        @keyframes logoGlow {
-            0% { opacity: 0.5; transform: scale(1); }
-            100% { opacity: 0.8; transform: scale(1.02); }
+        @keyframes infiniteGlow {
+            0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+            100% { opacity: 1; transform: scale(1.02) rotate(2deg); }
         }
         
         .gradient-text {
-            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+            background: linear-gradient(90deg, var(--primary), var(--infinite-purple), var(--infinite-cyan));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        .infinite-gradient {
+            background: linear-gradient(135deg, var(--infinite-purple), var(--infinite-cyan));
         }
         
         .card {
             background-color: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             border-radius: 16px;
             transition: all 0.3s ease;
             overflow: hidden;
@@ -132,14 +138,36 @@
         
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.2);
-            border-color: rgba(255, 107, 53, 0.3);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+        
+        .evolution-card {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(99, 102, 241, 0.1));
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        
+        .evolution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary), var(--infinite-purple), var(--infinite-cyan));
+            border-radius: 16px;
+            padding: 2px;
+            z-index: -1;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
         }
         
         .navbar {
             background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
         }
         
         .btn-primary {
@@ -156,18 +184,18 @@
             color: white;
         }
         
-        .btn-gold {
-            background: linear-gradient(135deg, var(--gold), #ffed4e);
-            color: #000;
+        .btn-infinite {
+            background: linear-gradient(135deg, var(--infinite-purple), var(--infinite-cyan));
+            color: white;
             transition: all 0.3s ease;
             border: none;
             font-weight: 600;
         }
         
-        .btn-gold:hover {
+        .btn-infinite:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
-            color: #000;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+            color: white;
         }
         
         .hero {
@@ -179,14 +207,14 @@
             padding-top: 80px;
         }
         
-        .hero:before {
+        .hero::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+            background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(99, 102, 241, 0.1) 50%, rgba(0,0,0,0.8) 100%);
             z-index: 1;
         }
         
@@ -195,154 +223,146 @@
             z-index: 2;
         }
         
-        .hero-bg {
+        .floating-particles {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0.8;
-            animation: bgPan 30s infinite linear;
+            overflow: hidden;
         }
         
-        @keyframes bgPan {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
-        }
-        
-        .sparkle {
+        .particle {
             position: absolute;
             width: 4px;
             height: 4px;
-            background: var(--gold);
+            background: var(--infinite-cyan);
             border-radius: 50%;
-            animation: sparkle 2s linear infinite;
+            animation: float 8s infinite linear;
+            opacity: 0.6;
         }
         
-        @keyframes sparkle {
-            0% { opacity: 0; transform: scale(0) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1) rotate(180deg); }
-            100% { opacity: 0; transform: scale(0) rotate(360deg); }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
         }
         
-        .data-stream {
-            position: absolute;
-            height: 100px;
-            width: 2px;
-            background: linear-gradient(to bottom, transparent, var(--primary), var(--secondary), transparent);
-            z-index: 0;
-            animation: dataStream 2s linear infinite;
-            opacity: 0.3;
-        }
-        
-        @keyframes dataStream {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100vh); }
-        }
-        
-        .service-card {
+        .evolution-timeline {
             position: relative;
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            padding: 2rem 0;
         }
         
-        .service-card::before {
+        .evolution-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--infinite-purple), var(--infinite-cyan));
+            border-radius: 2px;
+        }
+        
+        .evolution-step {
+            position: relative;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .evolution-step::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--infinite-purple), var(--infinite-cyan));
+            border-radius: 50%;
+            border: 4px solid var(--dark);
+            z-index: 2;
+        }
+        
+        .evolution-content {
+            width: 45%;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .evolution-left {
+            margin-right: auto;
+            margin-left: 0;
+        }
+        
+        .evolution-right {
+            margin-left: auto;
+            margin-right: 0;
+        }
+        
+        .product-showcase {
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+        }
+        
+        .price-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
-            transition: left 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+            transition: left 0.6s;
         }
         
-        .service-card:hover::before {
+        .price-card:hover::before {
             left: 100%;
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
-        }
-        
-        .icon-large {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-        
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .status-card {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.1);
-        }
-        
-        .status-card i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .price-card {
-            background: var(--card-bg);
-            border: 2px solid rgba(255, 107, 53, 0.3);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
         .price-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 0 30px rgba(255, 107, 53, 0.2);
+            border-color: var(--infinite-purple);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+            transform: translateY(-10px);
         }
         
-        .price-card.featured {
-            border-color: var(--gold);
-            background: rgba(26, 32, 44, 0.95);
+        .case-study-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
         
-        .price-card.featured::before {
-            content: "最受欢迎";
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: var(--gold);
-            color: #000;
-            padding: 0.5rem 1rem;
-            border-radius: 0 14px 0 14px;
-            font-weight: bold;
-            font-size: 0.8rem;
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
         }
         
         .case-visual {
             position: relative;
             height: 300px;
-            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        
-        .case-visual:hover {
-            transform: translateY(-10px);
         }
         
         .case-overlay {
@@ -350,122 +370,45 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 1.5rem;
+            padding: 2rem;
             background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
         }
         
-        .timeline-container {
-            position: relative;
+        .stats-showcase {
+            background: linear-gradient(135deg, var(--infinite-purple), var(--infinite-cyan));
+            color: white;
         }
         
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary), var(--accent), var(--secondary));
-            border-radius: 2px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            max-width: 6xl;
+            margin: 0 auto;
         }
         
-        .timeline-item {
-            position: relative;
-            margin: 2rem 0;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: var(--primary);
-            border-radius: 50%;
-            border: 4px solid var(--dark);
-            z-index: 2;
-        }
-        
-        .timeline-content {
-            width: 45%;
-            padding: 1.5rem;
-            background: var(--card-bg);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 107, 53, 0.2);
-        }
-        
-        .timeline-left {
-            margin-left: 0;
-        }
-        
-        .timeline-right {
-            margin-left: 55%;
-        }
-        
-        .newsletter-section {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-        }
-        
-        .newsletter-section input, .newsletter-section select {
-            color: #000;
-        }
-
         @media (max-width: 768px) {
             .hero {
                 min-height: 80vh;
                 padding-top: 70px;
             }
             
-            .hero-content h1 {
-                font-size: 2.5rem !important;
-                margin-top: 20px;
-            }
-            
-            .navbar {
-                padding: 0.5rem 1rem;
-            }
-            
-            .logo-main {
-                font-size: 20px;
-            }
-            
-            .logo-icon {
-                width: 36px;
-                height: 36px;
-                margin-right: 8px;
-            }
-            
-            .logo-symbol {
-                font-size: 18px;
-            }
-            
-            .timeline-item::before {
+            .evolution-timeline::before {
                 left: 20px;
             }
             
-            .timeline-container::before {
+            .evolution-step::before {
                 left: 20px;
             }
             
-            .timeline-content {
+            .evolution-content {
                 width: calc(100% - 60px);
-                margin-left: 60px;
+                margin-left: 60px !important;
+                margin-right: 0 !important;
             }
             
-            .timeline-right {
-                margin-left: 60px;
-            }
-            
-            .btn-primary, .btn-gold {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .card, .service-card {
-                padding: 1rem;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
             
             .mobile-menu-button {
@@ -487,12 +430,6 @@
             .mobile-menu.active {
                 transform: translateY(0);
             }
-            
-            .mobile-menu a {
-                display: block;
-                padding: 0.75rem 0;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
         }
         
         .mobile-menu-button {
@@ -504,79 +441,10 @@
             cursor: pointer;
         }
         
-        .navbar.scrolled {
-            background-color: rgba(0, 0, 0, 0.95);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.05);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            font-family: 'Orbitron', sans-serif;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-item {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background: rgba(255, 107, 53, 0.1);
-            transform: translateY(-5px);
-        }
-        
-        .contact-item .icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        /* 增强动画效果 */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: all 0.8s ease;
         }
         
         .fade-in.visible {
@@ -584,7 +452,6 @@
             transform: translateY(0);
         }
         
-        /* 自定义滚动条 */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -594,48 +461,104 @@
         }
         
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--infinite-purple), var(--infinite-cyan));
             border-radius: 4px;
         }
         
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        /* 新增案例样式 */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .ecosystem-case {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            height: 100%;
+        }
+        
+        .ecosystem-case:hover {
+            transform: translateY(-5px);
+            border-color: var(--infinite-purple);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
+        }
+        
+        .case-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .case-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--infinite-cyan);
         }
     </style>
 </head>
 <body>
-    <!-- 数据流 -->
-    <div class="data-stream" style="left: 20%; animation-delay: 0s;"></div>
-    <div class="data-stream" style="left: 40%; animation-delay: 0.5s;"></div>
-    <div class="data-stream" style="left: 60%; animation-delay: 1s;"></div>
-    <div class="data-stream" style="left: 80%; animation-delay: 1.5s;"></div>
+    <!-- 浮动粒子背景 -->
+    <div class="floating-particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 7s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 8s;"></div>
+    </div>
 
     <!-- 导航 -->
     <nav class="navbar fixed w-full z-50 px-4 py-3">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="logo-container">
                 <div class="logo-icon">
-                    <span class="logo-symbol">能</span>
+                    <span class="logo-symbol">∞</span>
                 </div>
                 <div class="logo-text">
-                    <div class="logo-main">能力</div>
-                    <div class="logo-sub">有限公司</div>
+                    <div class="logo-main">能力有限公司</div>
+                    <div class="logo-sub">NENGLI.WORLD</div>
                 </div>
             </a>
             
             <!-- 桌面导航 -->
             <div class="hidden md:flex space-x-8">
-                <a href="#services" class="hover:text-orange-400 transition font-medium">服务</a>
-                <a href="#advantages" class="hover:text-orange-400 transition font-medium">优势</a>
-                <a href="#cases" class="hover:text-orange-400 transition font-medium">案例</a>
-                <a href="#pricing" class="hover:text-orange-400 transition font-medium">定价</a>
-                <a href="#about" class="hover:text-orange-400 transition font-medium">关于</a>
-                <a href="#contact" class="hover:text-orange-400 transition font-medium">联系</a>
+                <a href="#evolution" class="hover:text-cyan-400 transition font-medium">战略进化</a>
+                <a href="#products" class="hover:text-cyan-400 transition font-medium">核心产品</a>
+                <a href="#cases" class="hover:text-cyan-400 transition font-medium">成功案例</a>
+                <a href="#pricing" class="hover:text-cyan-400 transition font-medium">定价体系</a>
+                <a href="#vision" class="hover:text-cyan-400 transition font-medium">未来愿景</a>
+                <a href="#contact" class="hover:text-cyan-400 transition font-medium">联系我们</a>
             </div>
             
             <div class="flex items-center space-x-4">
-                <a href="#contact" class="btn-gold px-6 py-2 rounded-full text-sm font-bold">免费咨询</a>
-                <a href="#pricing" class="btn-primary px-6 py-2 rounded-full text-sm">开始使用</a>
+                <a href="#contact" class="btn-infinite px-6 py-2 rounded-full text-sm font-bold">
+                    <i class="fas fa-infinity mr-2"></i>探索无限可能
+                </a>
+                <a href="#pricing" class="btn-primary px-6 py-2 rounded-full text-sm">开始构建世界</a>
                 
                 <!-- 移动菜单按钮 -->
                 <button class="mobile-menu-button md:hidden" id="menuToggle">
@@ -646,358 +569,482 @@
         
         <!-- 移动菜单 -->
         <div class="mobile-menu md:hidden" id="mobileMenu">
-            <a href="#services" class="hover:text-orange-400 transition">服务</a>
-            <a href="#advantages" class="hover:text-orange-400 transition">优势</a>
-            <a href="#cases" class="hover:text-orange-400 transition">案例</a>
-            <a href="#pricing" class="hover:text-orange-400 transition">定价</a>
-            <a href="#about" class="hover:text-orange-400 transition">关于</a>
-            <a href="#contact" class="hover:text-orange-400 transition">联系</a>
+            <a href="#evolution" class="hover:text-cyan-400 transition block py-3">战略进化</a>
+            <a href="#products" class="hover:text-cyan-400 transition block py-3">核心产品</a>
+            <a href="#cases" class="hover:text-cyan-400 transition block py-3">成功案例</a>
+            <a href="#pricing" class="hover:text-cyan-400 transition block py-3">定价体系</a>
+            <a href="#vision" class="hover:text-cyan-400 transition block py-3">未来愿景</a>
+            <a href="#contact" class="hover:text-cyan-400 transition block py-3">联系我们</a>
         </div>
     </nav>
 
     <!-- 英雄区域 -->
     <section class="hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
-        
-        <!-- 浮动粒子 -->
-        <div class="sparkle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
-        <div class="sparkle" style="top: 30%; right: 15%; animation-delay: 0.5s;"></div>
-        <div class="sparkle" style="bottom: 40%; left: 20%; animation-delay: 1s;"></div>
-        <div class="sparkle" style="top: 60%; right: 25%; animation-delay: 1.5s;"></div>
-        
         <div class="container mx-auto px-4 hero-content">
             <div class="max-w-6xl mx-auto text-center">
-                <div class="mb-8">
-                    <h1 class="text-5xl md:text-8xl font-bold mb-4 gradient-text">
-                        能力有限，未来无限
+                <div class="mb-12">
+                    <div class="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full text-sm font-bold">
+                        <i class="fas fa-rocket mr-2"></i>从"能力有限"到"可能性无限"的战略进化
+                    </div>
+                    <h1 class="text-4xl md:text-7xl font-bold mb-6 gradient-text leading-tight">
+                        AI时代品牌及IP<br>世界构建商
                     </h1>
-                    <p class="text-xl md:text-3xl text-gray-300 mb-2">
-                        AI原生内容营销先锋
+                    <p class="text-xl md:text-3xl text-gray-300 mb-4">
+                        重新定义品牌与用户关系：从"接收"到"体验+共创"
                     </p>
-                    <p class="text-lg md:text-xl text-gray-400">
-                        用AI重塑内容营销 • 赋予品牌超人创意力
+                    <p class="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto">
+                        为品牌和IP构建持续运行的互动体验世界系统，通过AI原生技术释放无限创意可能性和商业价值
                     </p>
                 </div>
                 
-                <!-- 状态信息卡片 -->
-                <div class="grid md:grid-cols-3 gap-6 mb-12">
-                    <div class="status-card text-center">
-                        <i class="fas fa-robot"></i>
-                        <h3 class="text-xl font-bold mb-2">AI原生技术</h3>
-                        <p class="text-gray-300">深度融合传统专业能力<br>与AI技术</p>
+                <!-- 核心价值主张 -->
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="evolution-card p-8 text-center">
+                        <div class="text-5xl mb-4 text-cyan-400">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">品牌世界创建</h3>
+                        <p class="text-gray-300">构建专属的互动体验宇宙<br>让用户深度沉浸品牌价值观</p>
+                        <div class="text-lg font-bold text-cyan-400 mt-3">300万起</div>
                     </div>
-                    <div class="status-card text-center">
-                        <i class="fas fa-trophy"></i>
-                        <h3 class="text-xl font-bold mb-2">行业成就</h3>
-                        <p class="text-gray-300">15+年行业经验<br>服务300+成功品牌</p>
+                    <div class="evolution-card p-8 text-center">
+                        <div class="text-5xl mb-4 text-purple-400">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">IP世界创建</h3>
+                        <p class="text-gray-300">为IP构建粉丝共创生态<br>实现IP价值的持续增长</p>
+                        <div class="text-lg font-bold text-purple-400 mt-3">50万起</div>
                     </div>
-                    <div class="status-card text-center">
-                        <i class="fas fa-rocket"></i>
-                        <h3 class="text-xl font-bold mb-2">效率革命</h3>
-                        <p class="text-gray-300">效率提升10倍<br>成本降低60-70%</p>
+                    <div class="evolution-card p-8 text-center">
+                        <div class="text-5xl mb-4 text-orange-400">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">AI伴侣创建</h3>
+                        <p class="text-gray-300">定制具有独特人格的AI伴侣<br>建立深度情感连接</p>
+                        <div class="text-lg font-bold text-orange-400 mt-3">100万起</div>
                     </div>
                 </div>
 
-                <!-- 关键数据 -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <!-- 核心数据展示 -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
                     <div class="bg-black bg-opacity-50 rounded-lg p-4">
-                        <div class="text-2xl md:text-3xl font-bold text-orange-400">15+</div>
-                        <div class="text-sm text-gray-400">年经验</div>
+                        <div class="text-2xl md:text-3xl font-bold text-cyan-400">15+</div>
+                        <div class="text-sm text-gray-400">年行业经验</div>
                     </div>
                     <div class="bg-black bg-opacity-50 rounded-lg p-4">
-                        <div class="text-2xl md:text-3xl font-bold text-orange-400">300+</div>
-                        <div class="text-sm text-gray-400">服务品牌</div>
+                        <div class="text-2xl md:text-3xl font-bold text-purple-400">300+</div>
+                        <div class="text-sm text-gray-400">成功案例</div>
                     </div>
                     <div class="bg-black bg-opacity-50 rounded-lg p-4">
                         <div class="text-2xl md:text-3xl font-bold text-orange-400">500M+</div>
                         <div class="text-sm text-gray-400">内容浏览量</div>
                     </div>
                     <div class="bg-black bg-opacity-50 rounded-lg p-4">
-                        <div class="text-2xl md:text-3xl font-bold text-orange-400">85%</div>
-                        <div class="text-sm text-gray-400">成功率</div>
+                        <div class="text-2xl md:text-3xl font-bold text-green-400">1000%</div>
+                        <div class="text-sm text-gray-400">最高ROI</div>
+                    </div>
+                    <div class="bg-black bg-opacity-50 rounded-lg p-4">
+                        <div class="text-2xl md:text-3xl font-bold text-yellow-400">∞</div>
+                        <div class="text-sm text-gray-400">可能性</div>
                     </div>
                 </div>
 
                 <!-- 行动按钮 -->
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
-                    <a href="#contact" class="btn-gold px-8 py-4 rounded-full text-lg font-bold">
-                        <i class="fas fa-comments mr-2"></i>免费咨询
+                    <a href="#contact" class="btn-infinite px-8 py-4 rounded-full text-lg font-bold">
+                        <i class="fas fa-infinity mr-2"></i>探索无限可能
                     </a>
-                    <a href="#services" class="btn-primary px-8 py-4 rounded-full text-lg font-bold">
-                        <i class="fas fa-rocket mr-2"></i>探索服务
+                    <a href="#products" class="btn-primary px-8 py-4 rounded-full text-lg font-bold">
+                        <i class="fas fa-globe mr-2"></i>构建品牌世界
                     </a>
-                    <a href="#cases" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black transition">
-                        <i class="fas fa-star mr-2"></i>案例研究
+                    <a href="#cases" class="bg-transparent border-2 border-cyan-400 px-8 py-4 rounded-full text-lg font-bold hover:bg-cyan-400 hover:text-black transition">
+                        <i class="fas fa-star mr-2"></i>成功案例
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 服务区域 -->
-    <section id="services" class="py-20 bg-black bg-opacity-30">
+    <!-- 战略进化区域 -->
+    <section id="evolution" class="py-20 bg-black bg-opacity-30">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">服务组合</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    三大核心产品线，为不同客户需求提供专业AI内容营销解决方案
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">战略进化：从有限到无限</h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    在AI重塑一切的时代，我们选择引领变化，从传统的"能力有限"模式进化为"可能性无限"的AI原生企业
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- 智能内容工厂 -->
-                <div class="service-card p-8 text-center">
-                    <div class="icon-large text-orange-400 floating">
-                        <i class="fas fa-industry"></i>
+            <!-- 进化对比 -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <div class="card p-8">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gray-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hourglass-half text-3xl text-gray-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-400">能力有限模式</h3>
+                        <p class="text-gray-500">传统服务商模式的局限性</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-orange-400">智能内容工厂</h3>
-                    <p class="text-lg mb-6 text-gray-300">AI驱动的内容生产线</p>
-                    <p class="text-sm text-gray-300 mb-6">
-                        让内容创作像工厂生产一样高效、稳定、可预测。从创意构思到内容创作的全流程AI赋能。
-                    </p>
-                    
-                    <div class="space-y-3 mb-6 text-left">
+                    <div class="space-y-4">
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>AI创意工作坊 - 无限创意生成</span>
+                            <i class="fas fa-times-circle text-red-400 mr-3"></i>
+                            <span class="text-gray-300">有限人力驱动的线性扩展</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>智能视频制作 - 自动化剪辑</span>
+                            <i class="fas fa-times-circle text-red-400 mr-3"></i>
+                            <span class="text-gray-300">项目制交付，无可持续资产</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>智能设计中心 - 批量生产</span>
+                            <i class="fas fa-times-circle text-red-400 mr-3"></i>
+                            <span class="text-gray-300">标准化服务，差异化困难</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>内容资产库 - 海量资源</span>
+                            <i class="fas fa-times-circle text-red-400 mr-3"></i>
+                            <span class="text-gray-300">用户被动接收，缺乏深度连接</span>
                         </div>
                     </div>
-                    
-                    <div class="text-3xl font-bold text-orange-400 mb-4">$1,450/月起</div>
-                    <p class="text-xs text-gray-400 mb-4">效率提升10倍，成本降低70%</p>
-                    <button class="btn-primary w-full py-3 rounded-lg font-bold">了解更多</button>
+                </div>
+
+                <div class="evolution-card p-8">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 infinite-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-infinity text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 gradient-text">可能性无限模式</h3>
+                        <p class="text-cyan-400">AI原生的未来企业模式</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3"></i>
+                            <span class="text-gray-300">用户主动参与，深度情感共创</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3"></i>
+                            <span class="text-gray-300">生成式系统驱动的指数增长</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3"></i>
+                            <span class="text-gray-300">资产式创造，持续价值增值</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3"></i>
+                            <span class="text-gray-300">无限个性化，独一无二体验</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 进化时间线 -->
+            <div class="evolution-timeline">
+                <div class="evolution-step">
+                    <div class="evolution-content evolution-left">
+                        <h4 class="text-xl font-bold mb-3 text-orange-400">传统内容营销时代</h4>
+                        <p class="text-gray-300 mb-3">品牌通过优质内容吸引用户注意力，建立品牌认知和好感度</p>
+                        <div class="text-sm text-gray-400">2009-2020年</div>
+                    </div>
                 </div>
                 
-                <!-- 全渠道营销大脑 -->
-                <div class="service-card p-8 text-center">
-                    <div class="icon-large text-blue-400 floating" style="animation-delay: 0.5s;">
-                        <i class="fas fa-brain"></i>
+                <div class="evolution-step">
+                    <div class="evolution-content evolution-right">
+                        <h4 class="text-xl font-bold mb-3 text-blue-400">数字化转型期</h4>
+                        <p class="text-gray-300 mb-3">多平台内容策略，数据驱动优化，开始AI工具辅助创作</p>
+                        <div class="text-sm text-gray-400">2020-2023年</div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">全渠道营销大脑</h3>
-                    <p class="text-lg mb-6 text-gray-300">智能营销决策系统</p>
-                    <p class="text-sm text-gray-300 mb-6">
-                        让营销决策像导航一样精准、智能、实时优化。跨平台统一营销管理，数据驱动决策。
-                    </p>
-                    
-                    <div class="space-y-3 mb-6 text-left">
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>智能活动中心 - 跨平台管理</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>社交媒体自动化 - 7×24小时运营</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>私域流量系统 - 精准转化</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>数据分析仪表盘 - 实时优化</span>
-                        </div>
-                    </div>
-                    
-                    <div class="text-3xl font-bold text-blue-400 mb-4">$4,400/月起</div>
-                    <p class="text-xs text-gray-400 mb-4">投资回报率提升100-200%</p>
-                    <button class="btn-primary w-full py-3 rounded-lg font-bold">了解更多</button>
                 </div>
                 
-                <!-- 超级IP孵化器 -->
-                <div class="service-card p-8 text-center">
-                    <div class="icon-large text-yellow-400 floating" style="animation-delay: 1s;">
-                        <i class="fas fa-star"></i>
+                <div class="evolution-step">
+                    <div class="evolution-content evolution-left">
+                        <h4 class="text-xl font-bold mb-3 text-purple-400">AI原生转型期</h4>
+                        <p class="text-gray-300 mb-3">平台全面AI化，从内容创作向体验构建转变</p>
+                        <div class="text-sm text-gray-400">2023-2025年</div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">超级IP孵化器</h3>
-                    <p class="text-lg mb-6 text-gray-300">端到端IP开发服务</p>
-                    <p class="text-sm text-gray-300 mb-6">
-                        让每个品牌都拥有自己的超级IP，实现长期价值增长。从IP概念到商业化的完整孵化服务。
-                    </p>
-                    
-                    <div class="space-y-3 mb-6 text-left">
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>IP概念工作坊 - 原创IP设计</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>内容矩阵生产 - 多媒体内容</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>IP运营与推广 - 跨平台运营</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check text-green-400 mr-3"></i>
-                            <span>IP商业化 - 授权与变现</span>
-                        </div>
+                </div>
+                
+                <div class="evolution-step">
+                    <div class="evolution-content evolution-right">
+                        <h4 class="text-xl font-bold mb-3 text-cyan-400">世界构建商时代</h4>
+                        <p class="text-gray-300 mb-3">成为AI时代品牌及IP世界构建商，创造互动体验宇宙</p>
+                        <div class="text-sm text-gray-400">2025年至今</div>
                     </div>
-                    
-                    <div class="text-3xl font-bold text-yellow-400 mb-4">$29,500/项目起</div>
-                    <p class="text-xs text-gray-400 mb-4">6个月完整孵化周期</p>
-                    <button class="btn-primary w-full py-3 rounded-lg font-bold">了解更多</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 核心优势区域 -->
-    <section id="advantages" class="py-20">
+    <!-- 核心产品体系 -->
+    <section id="products" class="product-showcase py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">核心竞争优势</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    传统专业能力与AI技术的深度原生融合，创造前所未有的内容营销服务体验
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">核心产品体系</h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    三大交付型产品解决方案，围绕"构建品牌及IP的数字生命世界"核心理念
                 </p>
             </div>
 
-            <!-- 优势类别 -->
-            <div class="mb-16">
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <div class="text-center">
-                        <div class="text-4xl mb-4 text-orange-400"><i class="fas fa-users"></i></div>
-                        <h3 class="text-xl font-bold mb-2">传统专业能力</h3>
-                        <p class="text-gray-400">15年行业专业知识和深厚专业经验</p>
+            <div class="space-y-16">
+                <!-- 品牌世界创建系统 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-sm font-bold mb-6">
+                            品牌世界创建系统 | 300万起
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6">为品牌构建专属互动宇宙</h3>
+                        <p class="text-lg text-gray-300 mb-8">
+                            构建一个专属的、持久运行的、高保真度的互动体验世界，让用户能够沉浸式地体验品牌价值观、参与品牌故事创造、建立深度情感连接。
+                        </p>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <h4 class="font-bold text-lg mb-3 text-orange-400">核心功能模块</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-cube text-orange-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">世界架构设计</div>
+                                            <div class="text-sm text-gray-400">品牌世界观构建与叙事框架</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-cogs text-orange-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">技术实现层</div>
+                                            <div class="text-sm text-gray-400">实时3D渲染与NeRFs技术</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-users text-orange-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">互动体验系统</div>
+                                            <div class="text-sm text-gray-400">个性化任务与社交协作</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-chart-line text-orange-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">数据分析平台</div>
+                                            <div class="text-sm text-gray-400">用户行为洞察与优化</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-lg mb-3 text-orange-400">应用场景示例</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                        <div class="font-semibold mb-1">豪华汽车品牌世界</div>
+                                        <div class="text-sm text-gray-400">虚拟制造工坊，用户参与设计定制化车型，AI大师级工匠引导</div>
+                                    </div>
+                                    <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                        <div class="font-semibold mb-1">高端时装品牌世界</div>
+                                        <div class="text-sm text-gray-400">时尚创意孵化空间，用户与AI设计师共创，虚拟时装秀展示</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary px-8 py-4 rounded-full font-bold">
+                            <i class="fas fa-globe mr-2"></i>了解品牌世界创建
+                        </button>
                     </div>
-                    <div class="text-center">
-                        <div class="text-4xl mb-4 text-blue-400"><i class="fas fa-microchip"></i></div>
-                        <h3 class="text-xl font-bold mb-2">AI技术赋能</h3>
-                        <p class="text-gray-400">前沿AI技术原生深度融合</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl mb-4 text-green-400"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="text-xl font-bold mb-2">结果保障</h3>
-                        <p class="text-gray-400">数据驱动决策，结果可预测</p>
+                    
+                    <div class="card p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-globe text-3xl text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-bold">交付物清单</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span>完整世界系统（可独立运行）</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span>管理后台与数据分析系统</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span>完整技术文档与操作指南</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span>团队培训服务</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span>源代码与技术资产所有权</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg text-center">
+                            <div class="text-2xl font-bold">300万起</div>
+                            <div class="text-sm opacity-90">6-12个月交付周期</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="feature-grid">
-                <!-- 传统专业优势 -->
-                <div class="card p-8">
-                    <div class="floating">
-                        <div class="text-5xl mb-6 text-orange-400">
-                            <i class="fas fa-award"></i>
+                <!-- IP世界创建系统 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="card p-8 order-2 lg:order-1">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-magic text-3xl text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-bold">适用IP类型</h4>
+                        </div>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-film text-purple-400 mr-3"></i>
+                                <span>影视宇宙（漫威、DC等超级英雄IP）</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-heart text-purple-400 mr-3"></i>
+                                <span>动漫IP（知名动画、漫画作品）</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-gamepad text-purple-400 mr-3"></i>
+                                <span>游戏IP（丰富世界观的游戏作品）</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-book text-purple-400 mr-3"></i>
+                                <span>文学IP（经典小说、网络文学）</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-microphone text-purple-400 mr-3"></i>
+                                <span>虚拟偶像（Vtuber、虚拟歌手）</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-center">
+                            <div class="text-2xl font-bold">50万起</div>
+                            <div class="text-sm opacity-90">3-6个月交付周期</div>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">传统专业护城河</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-lightbulb text-orange-400"></i>
-                            </div>
+                    
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6">
+                            IP世界创建系统 | 50万起
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6">为IP构建粉丝共创生态</h3>
+                        <p class="text-lg text-gray-300 mb-8">
+                            为成熟IP构建官方认证的互动世界系统，让粉丝能够深度沉浸在IP宇宙中，与喜爱的角色互动，参与IP世界的共创发展。
+                        </p>
+                        
+                        <div class="space-y-6 mb-8">
                             <div>
-                                <h4 class="font-bold mb-1">内容策略专长</h4>
-                                <p class="text-sm text-gray-400">15+年品牌营销经验，跨行业战略规划能力</p>
+                                <h4 class="font-bold text-lg mb-3 text-purple-400">核心功能特色</h4>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-map text-purple-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">正史世界构建</div>
+                                            <div class="text-sm text-gray-400">基于IP原著的世界观完整重现，关键场景高保真还原</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-user-friends text-purple-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">角色互动系统</div>
+                                            <div class="text-sm text-gray-400">IP主要角色的AI化身，个性与台词风格精准还原</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-pencil-alt text-purple-400 mr-3 mt-1"></i>
+                                        <div>
+                                            <div class="font-semibold">粉丝共创平台</div>
+                                            <div class="text-sm text-gray-400">用户生成内容创作工具，优秀作品获得IP官方认证</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-video text-orange-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">内容制作卓越</h4>
-                                <p class="text-sm text-gray-400">多媒体内容制作标准，完整生产线</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-bullhorn text-orange-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">营销与分发精通</h4>
-                                <p class="text-sm text-gray-400">跨渠道媒体投放策略，数据分析与优化经验</p>
-                            </div>
-                        </div>
+                        
+                        <button class="btn-infinite px-8 py-4 rounded-full font-bold">
+                            <i class="fas fa-magic mr-2"></i>了解IP世界创建
+                        </button>
                     </div>
                 </div>
 
-                <!-- AI技术优势 -->
-                <div class="card p-8">
-                    <div class="floating" style="animation-delay: 0.5s;">
-                        <div class="text-5xl mb-6 text-blue-400">
-                            <i class="fas fa-robot"></i>
+                <!-- AI伴侣创建系统 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6">
+                            AI伴侣创建系统 | 100万起
                         </div>
+                        <h3 class="text-3xl font-bold mb-6">定制具有独特人格的AI伴侣</h3>
+                        <p class="text-lg text-gray-300 mb-8">
+                            为品牌和IP量身定制具有独特人格的AI伴侣，作为用户在世界中的主要互动对象、情感连接纽带和品牌价值传递载体。
+                        </p>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <h4 class="font-bold text-lg mb-3 text-cyan-400">人格原型库</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                        <div class="font-semibold text-cyan-400 mb-1">智者型（Sage）</div>
+                                        <div class="text-xs text-gray-400 mb-2">金融服务、教育科技、专业咨询</div>
+                                        <div class="text-sm">知识渊博、值得信赖、耐心引导</div>
+                                    </div>
+                                    <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                        <div class="font-semibold text-cyan-400 mb-1">创造者型（Creator）</div>
+                                        <div class="text-xs text-gray-400 mb-2">设计软件、DIY品牌、艺术用品</div>
+                                        <div class="text-sm">富有想象力、鼓励创新、乐于分享</div>
+                                    </div>
+                                    <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                        <div class="font-semibold text-cyan-400 mb-1">探险家型（Explorer）</div>
+                                        <div class="text-xs text-gray-400 mb-2">旅游、户外运动、汽车</div>
+                                        <div class="text-sm">勇敢独立、追求自由、热爱发现</div>
+                                    </div>
+                                    <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                        <div class="font-semibold text-cyan-400 mb-1">陪伴者型（Companion）</div>
+                                        <div class="text-xs text-gray-400 mb-2">生活方式、健康养生、宠物用品</div>
+                                        <div class="text-sm">温暖体贴、善于倾听、细致关怀</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary px-8 py-4 rounded-full font-bold">
+                            <i class="fas fa-robot mr-2"></i>了解AI伴侣创建
+                        </button>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">AI技术差异化</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-magic text-blue-400"></i>
+                    
+                    <div class="card p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-robot text-3xl text-white"></i>
                             </div>
-                            <div>
-                                <h4 class="font-bold mb-1">智能创意生成</h4>
-                                <p class="text-sm text-gray-400">基于品牌DNA的AI创意引擎，多模态内容生成</p>
+                            <h4 class="text-xl font-bold">技术实现层级</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border border-cyan-400 p-4 rounded-lg">
+                                <div class="font-semibold text-cyan-400 mb-2">Level 3 - 深度伴侣型</div>
+                                <div class="text-sm text-gray-300 space-y-1">
+                                    <div>• 完全原创人格构建</div>
+                                    <div>• 神经网络级情感智能</div>
+                                    <div>• 长期关系学习能力</div>
+                                    <div>• 跨平台一致性体验</div>
+                                </div>
+                            </div>
+                            <div class="border border-blue-400 p-4 rounded-lg">
+                                <div class="font-semibold text-blue-400 mb-2">Level 2 - 智能互动型</div>
+                                <div class="text-sm text-gray-300 space-y-1">
+                                    <div>• 定制化人格设计</div>
+                                    <div>• 高级情感识别</div>
+                                    <div>• 复杂记忆系统</div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-500 p-4 rounded-lg">
+                                <div class="font-semibold text-gray-400 mb-2">Level 1 - 基础对话型</div>
+                                <div class="text-sm text-gray-300 space-y-1">
+                                    <div>• 标准化人格模板</div>
+                                    <div>• 基础对话功能</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-cogs text-blue-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">智能生产工作流</h4>
-                                <p class="text-sm text-gray-400">AI辅助视频剪辑，批量多版本内容生成</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-chart-bar text-blue-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">智能营销决策</h4>
-                                <p class="text-sm text-gray-400">实时数据监控分析，自动优化活动策略</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 融合创新优势 -->
-                <div class="card p-8">
-                    <div class="floating" style="animation-delay: 1s;">
-                        <div class="text-5xl mb-6 text-green-400">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">融合创新价值</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-shield-alt text-green-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">专业+智能双重保障</h4>
-                                <p class="text-sm text-gray-400">AI提供效率，专业人士确保质量</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-balance-scale text-green-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">规模+定制完美平衡</h4>
-                                <p class="text-sm text-gray-400">标准化流程支持规模化交付</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-tachometer-alt text-green-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">快速响应与迭代</h4>
-                                <p class="text-sm text-gray-400">AI缩短生产周期，实时数据反馈</p>
-                            </div>
+                        <div class="mt-6 p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg text-center">
+                            <div class="text-2xl font-bold">100万起</div>
+                            <div class="text-sm opacity-90">根据层级定价</div>
                         </div>
                     </div>
                 </div>
@@ -1005,19 +1052,63 @@
         </div>
     </section>
 
-    <!-- 成功案例区域 -->
+    <!-- 成功案例 -->
     <section id="cases" class="py-20 bg-black bg-opacity-30">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">成功案例研究</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    真实项目验证，跨行业成功案例展示AI原生内容营销的无限潜力
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    真实项目验证，跨行业成功案例展示AI原生世界构建的无限潜力
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <!-- 知识就是力量案例 -->
-                <div class="card overflow-hidden">
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <!-- 香港AI国际电影节案例 -->
+                <div class="case-study-card">
+                    <div class="case-visual bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <div class="text-center text-white p-8">
+                            <i class="fas fa-film text-6xl mb-4"></i>
+                            <h4 class="text-2xl font-bold">香港AI国际电影节</h4>
+                            <p class="text-lg opacity-90">全球首个AI原生内容主题国际电影节</p>
+                        </div>
+                        <div class="case-overlay">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">标杆项目</span>
+                                <span class="bg-pink-500 text-white px-3 py-1 rounded-full text-sm">生态构建</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">全球首个AI原生电影节生态</h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400">项目规模</span>
+                                <span class="text-white font-semibold">国际级电影节</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400">生态价值</span>
+                                <span class="text-white font-semibold">AI创作者完整生态体系</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            构建了完整的AI创作者生态体系，从技术工具、创作指导到展示平台的全链路支持，展现了AI+内容领域的前瞻性布局。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-400">1000+</div>
+                                <div class="text-sm text-gray-400">AI创作者参与</div>
+                            </div>
+                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-400">50+</div>
+                                <div class="text-sm text-gray-400">国家地区参与</div>
+                            </div>
+                        </div>
+                        <button class="btn-infinite w-full py-3 rounded-lg font-bold">查看详细案例</button>
+                    </div>
+                </div>
+
+                <!-- 知识就是力量IP数字升级 -->
+                <div class="case-study-card">
                     <div class="case-visual" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
                         <div class="w-full h-full bg-cover bg-center"></div>
                         <div class="case-overlay">
@@ -1036,7 +1127,7 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-gray-400">使用服务</span>
-                                <span class="text-white font-semibold">营销大脑 + 内容工厂</span>
+                                <span class="text-white font-semibold">IP世界创建 + AI伴侣</span>
                             </div>
                         </div>
                         <p class="text-gray-300 mb-6">
@@ -1055,59 +1146,148 @@
                         <button class="btn-primary w-full py-3 rounded-lg font-bold">查看详细案例</button>
                     </div>
                 </div>
+            </div>
 
-                <!-- FENGLL案例 -->
-                <div class="card overflow-hidden">
-                    <div class="case-visual" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
-                        <div class="w-full h-full bg-cover bg-center"></div>
-                        <div class="case-overlay">
-                            <div class="flex items-center mb-2">
-                                <span class="bg-pink-400 text-black px-3 py-1 rounded-full text-sm font-bold mr-3">美妆品牌</span>
-                                <span class="bg-purple-400 text-white px-3 py-1 rounded-full text-sm">IP营销</span>
+            <!-- 新增AI生态板块案例 -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-8 text-center gradient-text">AI生态板块成功案例</h3>
+                <div class="case-grid">
+                    <!-- AI电影学院 -->
+                    <div class="ecosystem-case">
+                        <div class="case-icon text-blue-400">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">AI电影学院</h4>
+                        <p class="text-gray-300 mb-4 text-center">
+                            培养AI原生时代的创作人才，建立产业人才标准。提供学位教育、职业认证、企业培训和线上课程。
+                        </p>
+                        <div class="case-stats">
+                            <div class="stat-item">
+                                <div class="stat-value text-blue-400">10,000+</div>
+                                <div class="stat-label">培养人才</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value text-blue-400">200+</div>
+                                <div class="stat-label">课程数量</div>
                             </div>
                         </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">FENGLL时尚品牌IP营销</h3>
-                        <div class="space-y-4 mb-6">
-                            <div class="flex justify-between items-center">
-                                <span class="text-gray-400">项目周期</span>
-                                <span class="text-white font-semibold">12个月</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-gray-400">使用服务</span>
-                                <span class="text-white font-semibold">超级IP孵化器 + 营销大脑</span>
-                            </div>
+                    
+                    <!-- AI电影市场 -->
+                    <div class="ecosystem-case">
+                        <div class="case-icon text-purple-400">
+                            <i class="fas fa-store"></i>
                         </div>
-                        <p class="text-gray-300 mb-6">
-                            新兴美妆品牌差异化突围案例。通过打造"冯小姐"虚拟品牌代言人，建立独特品牌IP，实现快速增长。
+                        <h4 class="text-xl font-bold mb-3 text-center">AI电影市场</h4>
+                        <p class="text-gray-300 mb-4 text-center">
+                            AI电影项目的众筹、制作、交易一体化平台。支持FilmToken发行和IP数字化交易。
                         </p>
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
-                                <div class="text-2xl font-bold text-pink-400">280%</div>
-                                <div class="text-sm text-gray-400">销售额增长</div>
+                        <div class="case-stats">
+                            <div class="stat-item">
+                                <div class="stat-value text-purple-400">500+</div>
+                                <div class="stat-label">成功项目</div>
                             </div>
-                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
-                                <div class="text-2xl font-bold text-pink-400">1:8</div>
-                                <div class="text-sm text-gray-400">营销投资回报率</div>
+                            <div class="stat-item">
+                                <div class="stat-value text-purple-400">1亿+</div>
+                                <div class="stat-label">交易额</div>
                             </div>
                         </div>
-                        <button class="btn-primary w-full py-3 rounded-lg font-bold">查看详细案例</button>
+                    </div>
+                    
+                    <!-- 404world串流平台 -->
+                    <div class="ecosystem-case">
+                        <div class="case-icon text-green-400">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">404world串流平台</h4>
+                        <p class="text-gray-300 mb-4 text-center">
+                            无限平行世界的创造与分享平台。支持AIUGC系统、动态观影体验和Watch-to-Earn机制。
+                        </p>
+                        <div class="case-stats">
+                            <div class="stat-item">
+                                <div class="stat-value text-green-400">100万+</div>
+                                <div class="stat-label">活跃用户</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value text-green-400">50,000+</div>
+                                <div class="stat-label">内容数量</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- BeingOS数位人经纪 -->
+                    <div class="ecosystem-case">
+                        <div class="case-icon text-yellow-400">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">BeingOS数位人经纪</h4>
+                        <p class="text-gray-300 mb-4 text-center">
+                            AI伴侣生态系统。提供AI伴侣创造工具、智能训练系统和明星数字化服务。
+                        </p>
+                        <div class="case-stats">
+                            <div class="stat-item">
+                                <div class="stat-value text-yellow-400">10,000+</div>
+                                <div class="stat-label">AI伴侣数量</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value text-yellow-400">100+</div>
+                                <div class="stat-label">明星数字化</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 全球征片中心 -->
+                    <div class="ecosystem-case">
+                        <div class="case-icon text-red-400">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">全球征片中心</h4>
+                        <p class="text-gray-300 mb-4 text-center">
+                            内容发现引擎。成为全球AI原生内容的权威发现、评估和推广机构。
+                        </p>
+                        <div class="case-stats">
+                            <div class="stat-item">
+                                <div class="stat-value text-red-400">5,000+</div>
+                                <div class="stat-label">征集作品</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value text-red-400">200+</div>
+                                <div class="stat-label">合作机构</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 更多案例 -->
-            <div class="grid md:grid-cols-3 gap-8">
+            <!-- 更多案例展示 -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="card p-6">
+                    <div class="text-3xl mb-4 text-pink-400">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">FENGLL时尚品牌</h4>
+                    <p class="text-sm text-gray-300 mb-4">虚拟品牌代言人"冯小姐"IP营销</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">销售额增长</span>
+                            <span class="text-pink-400 font-bold">280%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">营销ROI</span>
+                            <span class="text-pink-400 font-bold">1:8</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card p-6">
                     <div class="text-3xl mb-4 text-blue-400">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <h4 class="text-lg font-bold mb-2">悦悦活力计划</h4>
-                    <p class="text-sm text-gray-300 mb-4">电商平台营销升级项目</p>
+                    <p class="text-sm text-gray-300 mb-4">电商平台AI营销升级项目</p>
                     <div class="space-y-2 text-sm">
                         <div class="flex justify-between">
-                            <span class="text-gray-400">日活跃用户增长</span>
+                            <span class="text-gray-400">日活增长</span>
                             <span class="text-blue-400 font-bold">150%</span>
                         </div>
                         <div class="flex justify-between">
@@ -1118,510 +1298,592 @@
                 </div>
 
                 <div class="card p-6">
-                    <div class="text-3xl mb-4 text-purple-400">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2">新星艺术家IP</h4>
-                    <p class="text-sm text-gray-300 mb-4">个人IP全面升级项目</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">粉丝增长</span>
-                            <span class="text-purple-400 font-bold">800万</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">商业价值提升</span>
-                            <span class="text-purple-400 font-bold">500%↑</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card p-6">
                     <div class="text-3xl mb-4 text-green-400">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h4 class="text-lg font-bold mb-2">传统制造业</h4>
-                    <p class="text-sm text-gray-300 mb-4">工业品牌数字营销转型</p>
+                    <h4 class="text-lg font-bold mb-2">传统制造业转型</h4>
+                    <p class="text-sm text-gray-300 mb-4">工业品牌数字营销世界构建</p>
                     <div class="space-y-2 text-sm">
                         <div class="flex justify-between">
                             <span class="text-gray-400">线上询盘增长</span>
-                            <span class="text-green-400 font-bold">+400%</span>
+                            <span class="text-green-400 font-bold">400%</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-400">成本降低</span>
+                            <span class="text-gray-400">营销成本降低</span>
                             <span class="text-green-400 font-bold">60%</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- ROI计算展示 -->
+            <div class="card p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 text-center">投资回报率对比分析</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <h4 class="text-lg font-bold mb-4 text-gray-400">传统营销活动ROI</h4>
+                        <div class="space-y-3">
+                            <div class="text-3xl font-bold text-gray-400">50%-200%</div>
+                            <div class="text-sm text-gray-500">典型周期：3-6个月</div>
+                            <div class="text-sm text-gray-500">短期曝光，有限数据价值</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-lg font-bold mb-4 text-cyan-400">互动世界系统ROI</h4>
+                        <div class="space-y-3">
+                            <div class="text-3xl font-bold text-cyan-400">300%-1000%</div>
+                            <div class="text-sm text-cyan-400">典型周期：3-5年</div>
+                            <div class="text-sm text-cyan-400">持续增值，数字资产价值</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg text-center">
+                    <div class="font-bold">平均LTV提升：150%-300% | 用户参与时间：比传统内容高出10-50倍</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 定价区域 -->
+    <!-- 定价体系 -->
     <section id="pricing" class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">服务定价体系</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    透明定价，价值计费，提供灵活的服务组合解决方案
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    透明定价，价值计费，从项目制转向资产式创造的全新商业模式
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- 智能内容工厂定价 -->
+            <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <!-- 品牌世界创建定价 -->
                 <div class="price-card">
-                    <div class="text-center mb-6">
-                        <div class="text-4xl mb-4 text-orange-400"><i class="fas fa-industry"></i></div>
-                        <h3 class="text-2xl font-bold mb-2">智能内容工厂</h3>
-                        <p class="text-gray-400">AI驱动的内容生产解决方案</p>
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-globe text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">品牌世界创建</h3>
+                        <p class="text-gray-400">为品牌构建专属互动宇宙</p>
+                        <div class="text-4xl font-bold text-orange-400 mt-4">300万起</div>
+                        <div class="text-sm text-gray-400 mt-2">6-12个月交付周期</div>
                     </div>
                     
                     <div class="space-y-4 mb-8">
-                        <div class="border-b border-gray-700 pb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">基础套餐</span>
-                                <span class="text-2xl font-bold text-orange-400">$1,450/月</span>
+                        <h4 class="font-bold text-lg text-orange-400">包含服务</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">完整世界架构设计</span>
                             </div>
-                            <p class="text-sm text-gray-400">50个视频 + 200张图片</p>
-                        </div>
-                        
-                        <div class="border-b border-gray-700 pb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">专业套餐</span>
-                                <span class="text-2xl font-bold text-orange-400">$2,930/月</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">实时3D渲染系统</span>
                             </div>
-                            <p class="text-sm text-gray-400">200个视频 + 800张图片</p>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">企业套餐</span>
-                                <span class="text-2xl font-bold text-orange-400">$5,880/月</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">互动体验机制</span>
                             </div>
-                            <p class="text-sm text-gray-400">500个视频 + 2000张图片</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">数据分析后台</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">源代码所有权</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <button class="btn-primary w-full py-3 rounded-lg font-bold mb-4">选择套餐</button>
-                    <p class="text-center text-sm text-gray-400">效率提升10倍，成本降低70%</p>
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold">咨询品牌世界</button>
                 </div>
 
-                <!-- 全渠道营销大脑定价 -->
-                <div class="price-card featured">
-                    <div class="text-center mb-6">
-                        <div class="text-4xl mb-4 text-blue-400"><i class="fas fa-brain"></i></div>
-                        <h3 class="text-2xl font-bold mb-2">营销大脑</h3>
-                        <p class="text-gray-400">智能营销决策系统</p>
-                    </div>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="border-b border-gray-700 pb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">增长套餐</span>
-                                <span class="text-2xl font-bold text-blue-400">$4,400/月</span>
-                            </div>
-                            <p class="text-sm text-gray-400">单一旗舰产品品牌</p>
-                        </div>
-                        
-                        <div class="border-b border-gray-700 pb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">专业套餐</span>
-                                <span class="text-2xl font-bold text-blue-400">$8,850/月</span>
-                            </div>
-                            <p class="text-sm text-gray-400">多产品成熟品牌</p>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">企业套餐</span>
-                                <span class="text-2xl font-bold text-blue-400">$14,750/月</span>
-                            </div>
-                            <p class="text-sm text-gray-400">大型企业集团</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn-gold w-full py-3 rounded-lg font-bold mb-4">选择套餐</button>
-                    <p class="text-center text-sm text-gray-400">投资回报率提升100-200%</p>
-                </div>
-
-                <!-- 超级IP孵化器定价 -->
+                <!-- IP世界创建定价 -->
                 <div class="price-card">
-                    <div class="text-center mb-6">
-                        <div class="text-4xl mb-4 text-yellow-400"><i class="fas fa-star"></i></div>
-                        <h3 class="text-2xl font-bold mb-2">超级IP孵化器</h3>
-                        <p class="text-gray-400">端到端IP开发服务</p>
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-magic text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">IP世界创建</h3>
+                        <p class="text-gray-400">为IP构建粉丝共创生态</p>
+                        <div class="text-4xl font-bold text-purple-400 mt-4">50万起</div>
+                        <div class="text-sm text-gray-400 mt-2">3-6个月交付周期</div>
                     </div>
                     
                     <div class="space-y-4 mb-8">
-                        <div class="border-b border-gray-700 pb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">孵化套餐</span>
-                                <span class="text-2xl font-bold text-yellow-400">$29,500</span>
+                        <h4 class="font-bold text-lg text-purple-400">包含服务</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">正史世界构建</span>
                             </div>
-                            <p class="text-sm text-gray-400">6个月IP从0到1孵化</p>
-                        </div>
-                        
-                        <div class="border-b border-gray-700 pb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">成长套餐</span>
-                                <span class="text-2xl font-bold text-yellow-400">$59,000</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">角色AI化身创建</span>
                             </div>
-                            <p class="text-sm text-gray-400">12个月运营+商业化</p>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold">超级套餐</span>
-                                <span class="text-2xl font-bold text-yellow-400">$118,000</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">粉丝共创平台</span>
                             </div>
-                            <p class="text-sm text-gray-400">24个月全面商业化</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">社区管理系统</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">运营培训支持</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <button class="btn-primary w-full py-3 rounded-lg font-bold mb-4">选择套餐</button>
-                    <p class="text-center text-sm text-gray-400">6个月打造超级IP</p>
+                    <button class="btn-infinite w-full py-3 rounded-lg font-bold">咨询IP世界</button>
+                </div>
+
+                <!-- AI伴侣创建定价 -->
+                <div class="price-card">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-robot text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">AI伴侣创建</h3>
+                        <p class="text-gray-400">定制独特人格AI伴侣</p>
+                        <div class="text-4xl font-bold text-cyan-400 mt-4">100万起</div>
+                        <div class="text-sm text-gray-400 mt-2">2-4个月交付周期</div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <h4 class="font-bold text-lg text-cyan-400">包含服务</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">人格工程设计</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">大语言模型精调</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">情感智能引擎</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">多模态交互能力</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                <span class="text-sm">持续学习优化</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold">咨询AI伴侣</button>
                 </div>
             </div>
-            
-            <!-- 定价保障 -->
-            <div class="mt-16 text-center">
-                <div class="card p-8 max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold mb-6">价格保障与支持</h3>
-                    <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- 组合方案 -->
+            <div class="max-w-4xl mx-auto">
+                <div class="evolution-card p-8 text-center">
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">完整世界构建解决方案</h3>
+                    <p class="text-xl text-gray-300 mb-8">
+                        品牌世界 + IP生态 + AI伴侣的完整解决方案，享受协同优化和价格优惠
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-shield-alt text-2xl text-green-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-2">结果保障</h4>
-                            <p class="text-sm text-gray-400">无效果，前30天全额退款</p>
+                            <div class="text-2xl font-bold text-orange-400">世界构建</div>
+                            <div class="text-sm text-gray-400">专属品牌宇宙</div>
                         </div>
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-headset text-2xl text-blue-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-2">7×24支持</h4>
-                            <p class="text-sm text-gray-400">专属客户经理即时响应</p>
+                            <div class="text-2xl font-bold text-purple-400">生态运营</div>
+                            <div class="text-sm text-gray-400">用户共创平台</div>
                         </div>
                         <div class="text-center">
-                            <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-sync-alt text-2xl text-yellow-400"></i>
-                            </div>
-                            <h4 class="font-bold mb-2">灵活扩展</h4>
-                            <p class="text-sm text-gray-400">随时升级或降级套餐，无违约金</p>
+                            <div class="text-2xl font-bold text-cyan-400">AI伴侣</div>
+                            <div class="text-sm text-gray-400">情感连接纽带</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 关于区域 -->
-    <section id="about" class="py-20 bg-black bg-opacity-30">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">关于能力有限公司</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    通过传统专业能力与AI创新的完美融合，开创内容营销的未来
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- 公司故事 -->
-                <div>
-                    <h3 class="text-3xl font-bold mb-6">我们的故事</h3>
-                    <div class="space-y-6 text-gray-300">
-                        <p>
-                            能力有限公司成立于2009年，最初是一家传统的内容营销机构，拥有大胆的愿景：通过故事叙述和技术的力量，彻底改变品牌与受众的连接方式。
-                        </p>
-                        <p>
-                            凭借15年以上的行业经验，我们已从传统的营销专家发展成为AI原生内容的先驱。我们的旅程以持续创新为标志，服务了300多个跨行业品牌，创造了超过5亿的内容浏览量。
-                        </p>
-                        <p>
-                            如今，我们站在AI革命的前沿，将深厚的行业专业知识与尖端技术相结合，为客户提供前所未有的营销解决方案，推动真正可衡量的结果。
-                        </p>
-                    </div>
-
-                    <!-- 关键里程碑时间线 -->
-                    <div class="mt-12">
-                        <h4 class="text-xl font-bold mb-6">关键里程碑</h4>
-                        <div class="timeline-container">
-                            <div class="timeline-item">
-                                <div class="timeline-content timeline-left">
-                                    <h5 class="font-bold text-orange-400">2009年 - 创立</h5>
-                                    <p class="text-sm text-gray-400">成立为精品内容营销机构</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content timeline-right">
-                                    <h5 class="font-bold text-blue-400">2015年 - 数字化转型</h5>
-                                    <p class="text-sm text-gray-400">开创多平台内容策略</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content timeline-left">
-                                    <h5 class="font-bold text-green-400">2020年 - AI整合</h5>
-                                    <p class="text-sm text-gray-400">首个AI驱动的内容生成工具发布</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content timeline-right">
-                                    <h5 class="font-bold text-yellow-400">2023年 - AI原生演进</h5>
-                                    <p class="text-sm text-gray-400">平台全面转型为AI原生解决方案</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-content timeline-left">
-                                    <h5 class="font-bold text-purple-400">2025年 - 全球扩张</h5>
-                                    <p class="text-sm text-gray-400">进入国际市场，提供英语服务</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 公司数据与价值观 -->
-                <div>
-                    <div class="card p-8 mb-8">
-                        <h4 class="text-2xl font-bold mb-6 text-center">公司数据</h4>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">15+</div>
-                                <div class="stat-label">年经验</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">300+</div>
-                                <div class="stat-label">服务品牌</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">500M+</div>
-                                <div class="stat-label">内容浏览量</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">85%</div>
-                                <div class="stat-label">成功率</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">团队成员</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">7×24</div>
-                                <div class="stat-label">支持服务</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 核心价值观 -->
-                    <div class="card p-8">
-                        <h4 class="text-2xl font-bold mb-6">核心价值观</h4>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                    <i class="fas fa-lightbulb text-orange-400"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold mb-1">创新为先</h5>
-                                    <p class="text-sm text-gray-400">不断突破边界，应用尖端AI技术</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                    <i class="fas fa-handshake text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold mb-1">客户成功</h5>
-                                    <p class="text-sm text-gray-400">您的成功就是我们的成功 - 结果导向的方法</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                    <i class="fas fa-leaf text-green-400"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold mb-1">可持续增长</h5>
-                                    <p class="text-sm text-gray-400">建立长期合作伙伴关系，实现共同繁荣</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-8 h-8 bg-purple-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
-                                    <i class="fas fa-eye text-purple-400"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold mb-1">透明度</h5>
-                                    <p class="text-sm text-gray-400">所有互动中保持开放沟通和诚实报告</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 通讯订阅区域 -->
-    <section class="newsletter-section py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">领先AI营销革命</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                获取独家洞察、案例研究和新AI营销工具的抢先体验。加入10,000+正在转型策略的营销专业人士行列。
-            </p>
-            
-            <div class="max-w-2xl mx-auto">
-                <div class="flex flex-col md:flex-row gap-4">
-                    <input type="email" placeholder="输入您的电子邮箱地址" 
-                           class="flex-1 px-6 py-4 rounded-lg text-black font-medium focus:outline-none focus:ring-2 focus:ring-white">
-                    <select class="px-6 py-4 rounded-lg text-black font-medium focus:outline-none focus:ring-2 focus:ring-white">
-                        <option>我对以下内容感兴趣...</option>
-                        <option>智能内容工厂</option>
-                        <option>营销大脑</option>
-                        <option>超级IP孵化器</option>
-                        <option>所有服务</option>
-                    </select>
-                    <button class="bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition">
-                        立即订阅
+                    <div class="text-5xl font-bold gradient-text mb-4">500万起</div>
+                    <div class="text-lg text-gray-400 mb-6">节省100万+，12-18个月交付</div>
+                    <button class="btn-infinite px-12 py-4 rounded-full text-xl font-bold">
+                        <i class="fas fa-rocket mr-2"></i>启动完整解决方案
                     </button>
                 </div>
-                
-                <p class="text-sm mt-4 opacity-80">
-                    订阅即表示您同意接收营销邮件。可随时退订。适用隐私政策。
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心技术架构 -->
+    <section class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">AI原生技术架构</h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    基于前沿AI技术栈，构建可持续运行的智能世界系统
                 </p>
             </div>
-            
-            <!-- 通讯订阅福利 -->
-            <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
-                <div class="flex items-center justify-center">
-                    <i class="fas fa-chart-line text-2xl mr-3"></i>
-                    <span>每周AI营销洞察</span>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">生成式AI引擎矩阵</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">内容生成层</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-brain text-cyan-400 mr-3"></i>
+                                    <div>
+                                        <div class="font-semibold">AIF-GPT-Creator</div>
+                                        <div class="text-sm text-gray-400">1000亿参数的创意内容生成模型</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-image text-cyan-400 mr-3"></i>
+                                    <div>
+                                        <div class="font-semibold">AIF-Vision</div>
+                                        <div class="text-sm text-gray-400">4K分辨率图像生成与编辑引擎</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-video text-cyan-400 mr-3"></i>
+                                    <div>
+                                        <div class="font-semibold">AIF-Video</div>
+                                        <div class="text-sm text-gray-400">8K@60fps视频生成与实时渲染</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">智能交互层</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-heart text-purple-400 mr-3"></i>
+                                    <span>多模态情感识别与理解</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-comments text-purple-400 mr-3"></i>
+                                    <span>个性化对话策略生成</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chart-line text-purple-400 mr-3"></i>
+                                    <span>用户行为预测与适应</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center justify-center">
-                    <i class="fas fa-rocket text-2xl mr-3"></i>
-                    <span>新工具抢先体验</span>
+
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">神经渲染技术</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">核心技术组合</h4>
+                            <div class="space-y-3">
+                                <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                    <div class="font-semibold text-orange-400 mb-1">神经辐射场（NeRFs）</div>
+                                    <div class="text-sm text-gray-400">从2D图像重建超真实3D场景</div>
+                                </div>
+                                <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                    <div class="font-semibold text-orange-400 mb-1">3D高斯溅射（3DGS）</div>
+                                    <div class="text-sm text-gray-400">实时高保真渲染优化</div>
+                                </div>
+                                <div class="bg-black bg-opacity-30 p-4 rounded-lg">
+                                    <div class="font-semibold text-orange-400 mb-1">实时光线追踪</div>
+                                    <div class="text-sm text-gray-400">物理级光影效果</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">性能优化</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="text-center p-3 bg-orange-400 bg-opacity-20 rounded-lg">
+                                    <div class="text-sm font-semibold">多级细节</div>
+                                    <div class="text-xs text-gray-400">LOD自动调整</div>
+                                </div>
+                                <div class="text-center p-3 bg-orange-400 bg-opacity-20 rounded-lg">
+                                    <div class="text-sm font-semibold">智能遮挡</div>
+                                    <div class="text-xs text-gray-400">剔除算法</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center justify-center">
-                    <i class="fas fa-users text-2xl mr-3"></i>
-                    <span>专属社区访问</span>
+            </div>
+
+            <!-- 跨平台兼容性 -->
+            <div class="card p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 text-center gradient-text">全平台统一体验</h3>
+                <div class="grid md:grid-cols-5 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-desktop text-2xl text-blue-400"></i>
+                        </div>
+                        <div class="font-semibold">Web浏览器</div>
+                        <div class="text-xs text-gray-400">WebGL/WebGPU</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-mobile-alt text-2xl text-green-400"></i>
+                        </div>
+                        <div class="font-semibold">移动设备</div>
+                        <div class="text-xs text-gray-400">iOS/Android</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-vr-cardboard text-2xl text-purple-400"></i>
+                        </div>
+                        <div class="font-semibold">VR设备</div>
+                        <div class="text-xs text-gray-400">Quest/PICO</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-cyan-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-cube text-2xl text-cyan-400"></i>
+                        </div>
+                        <div class="font-semibold">AR设备</div>
+                        <div class="text-xs text-gray-400">HoloLens</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-tv text-2xl text-yellow-400"></i>
+                        </div>
+                        <div class="font-semibold">智能电视</div>
+                        <div class="text-xs text-gray-400">游戏主机</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-300">跨平台一致的用户界面 • 设备性能自适应渲染 • 无缝数据同步机制</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系区域 -->
+    <!-- 未来愿景 -->
+    <section id="vision" class="stats-showcase py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">未来愿景：可能性无限</h2>
+                <p class="text-xl opacity-90 max-w-4xl mx-auto">
+                    我们不是在帮助客户适应变化，而是在帮助客户引领变化，共创AI时代的无限可能
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-globe-americas text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">数字体验革命</h3>
+                    <p class="opacity-90">
+                        重新定义人机关系：从工具使用到伙伴协作，从信息获取到情感连接，从被动接受到主动创造
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">创作民主化</h3>
+                    <p class="opacity-90">
+                        让每个人都能成为创作者，降低创意表达门槛，构建多元化内容生态，释放人类创造潜能
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">社会价值贡献</h3>
+                    <p class="opacity-90">
+                        推动教育变革、文化传承创新、社会连接强化，为构建更加包容、创新的数字社会贡献力量
+                    </p>
+                </div>
+            </div>
+
+            <!-- 承诺宣言 -->
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl font-bold mb-8">我们的承诺</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3">对客户</h4>
+                        <p class="opacity-90">
+                            交付的不仅是产品，更是可持续增值的数字资产，一个能够与用户建立深度情感连接的品牌世界
+                        </p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3">对用户</h4>
+                        <p class="opacity-90">
+                            创造的每一个体验都将尊重用户自主性，保护用户隐私，促进用户全面发展
+                        </p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3">对社会</h4>
+                        <p class="opacity-90">
+                            负责任地应用AI技术，推动文化传承创新，促进教育普及进步，贡献于人类文明数字化进程
+                        </p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3">对未来</h4>
+                        <p class="opacity-90">
+                            持续探索AI与人类协作的最佳模式，为构建更加包容、创新、可持续的数字社会贡献力量
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">立即开始</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    准备好用AI改变您的内容营销了吗？让我们讨论如何帮助您实现前所未有的增长。
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">开启无限可能之旅</h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    准备好与我们一起从"能力有限"进化为"可能性无限"了吗？让我们探讨如何为您的品牌或IP构建独一无二的数字世界
                 </p>
             </div>
 
             <div class="contact-grid">
                 <!-- 联系表单 -->
-                <div class="lg:col-span-2">
+                <div>
                     <div class="card p-8">
-                        <h3 class="text-2xl font-bold mb-6">免费策略咨询</h3>
+                        <h3 class="text-2xl font-bold mb-6">免费战略咨询</h3>
                         <form class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-sm font-medium mb-2">全名 *</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none" required>
+                                    <label class="block text-sm font-medium mb-2">姓名 *</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none" required>
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium mb-2">电子邮箱 *</label>
-                                    <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none" required>
+                                    <label class="block text-sm font-medium mb-2">职位</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none">
                                 </div>
                             </div>
                             
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-sm font-medium mb-2">公司名称</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
+                                    <label class="block text-sm font-medium mb-2">公司名称 *</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none" required>
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium mb-2">电话号码</label>
-                                    <input type="tel" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
+                                    <label class="block text-sm font-medium mb-2">电子邮箱 *</label>
+                                    <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none" required>
                                 </div>
                             </div>
                             
                             <div>
-                                <label class="block text-sm font-medium mb-2">服务兴趣</label>
-                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
-                                    <option>选择服务...</option>
-                                    <option>智能内容工厂</option>
-                                    <option>全渠道营销大脑</option>
-                                    <option>超级IP孵化器</option>
-                                    <option>服务组合</option>
-                                    <option>定制解决方案</option>
+                                <label class="block text-sm font-medium mb-2">感兴趣的服务 *</label>
+                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none" required>
+                                    <option value="">选择您最感兴趣的服务...</option>
+                                    <option value="brand-world">品牌世界创建系统</option>
+                                    <option value="ip-world">IP世界创建系统</option>
+                                    <option value="ai-companion">AI伴侣创建系统</option>
+                                    <option value="complete-solution">完整世界构建解决方案</option>
+                                    <option value="consultation">战略咨询服务</option>
                                 </select>
                             </div>
                             
                             <div>
-                                <label class="block text-sm font-medium mb-2">月营销预算</label>
-                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
-                                    <option>选择预算范围...</option>
-                                    <option>低于$5,000</option>
-                                    <option>$5,000 - $15,000</option>
-                                    <option>$15,000 - $50,000</option>
-                                    <option>$50,000 - $100,000</option>
-                                    <option>$100,000以上</option>
+                                <label class="block text-sm font-medium mb-2">项目预算范围</label>
+                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none">
+                                    <option value="">请选择预算范围...</option>
+                                    <option value="50-100">50万-100万</option>
+                                    <option value="100-300">100万-300万</option>
+                                    <option value="300-500">300万-500万</option>
+                                    <option value="500-1000">500万-1000万</option>
+                                    <option value="1000+">1000万以上</option>
                                 </select>
                             </div>
                             
                             <div>
-                                <label class="block text-sm font-medium mb-2">请告诉我们您的营销挑战</label>
-                                <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none" placeholder="描述您当前的营销状况、目标以及我们能如何帮助..."></textarea>
+                                <label class="block text-sm font-medium mb-2">项目紧急程度</label>
+                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none">
+                                    <option value="">请选择时间要求...</option>
+                                    <option value="urgent">紧急（1个月内启动）</option>
+                                    <option value="normal">常规（2-3个月内启动）</option>
+                                    <option value="planning">规划中（6个月内启动）</option>
+                                    <option value="future">未来考虑（仅了解方案）</option>
+                                </select>
                             </div>
                             
-                            <button type="submit" class="btn-gold w-full py-4 rounded-lg text-lg font-bold">
-                                获取免费策略咨询
+                            <div>
+                                <label class="block text-sm font-medium mb-2">项目需求描述 *</label>
+                                <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none" 
+                                    placeholder="请描述您的品牌/IP背景、目标用户、希望实现的体验效果，以及当前面临的挑战..." required></textarea>
+                            </div>
+                            
+                            <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg">
+                                <div class="flex items-start">
+                                    <input type="checkbox" id="agree" class="mt-1 mr-3" required>
+                                    <label for="agree" class="text-sm text-gray-300">
+                                        我同意能力有限公司收集和处理上述信息用于项目咨询目的，并了解可以随时撤回同意。我已阅读并同意
+                                        <a href="#" class="text-cyan-400 hover:underline">隐私政策</a>和
+                                        <a href="#" class="text-cyan-400 hover:underline">服务条款</a>。
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-infinite w-full py-4 rounded-lg text-lg font-bold">
+                                <i class="fas fa-rocket mr-2"></i>获取免费战略咨询
                             </button>
                             
-                            <p class="text-xs text-gray-400 text-center">
-                                提交此表单即表示您同意我们的隐私政策和服务条款。
-                            </p>
+                            <div class="text-center text-sm text-gray-400">
+                                <p>提交后，我们的战略顾问将在24小时内与您联系</p>
+                            </div>
                         </form>
                     </div>
                 </div>
 
                 <!-- 联系信息 -->
                 <div class="space-y-6">
-                    <div class="contact-item">
-                        <i class="icon fas fa-envelope"></i>
-                        <h4 class="font-bold mb-2">电子邮件</h4>
-                        <p class="text-gray-300">hello@nengli.tv</p>
-                        <p class="text-sm text-gray-400">2小时内回复</p>
+                    <div class="card p-6 text-center">
+                        <i class="fas fa-envelope text-3xl text-cyan-400 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">电子邮件</h4>
+                        <p class="text-gray-300 mb-2">hello@nengli.world</p>
+                        <p class="text-sm text-gray-400">24小时内专业回复</p>
                     </div>
                     
-                    <div class="contact-item">
-                        <i class="icon fas fa-calendar"></i>
-                        <h4 class="font-bold mb-2">预约通话</h4>
-                        <p class="text-gray-300">预约30分钟咨询</p>
-                        <p class="text-sm text-gray-400">本周有空档</p>
+                    <div class="card p-6 text-center">
+                        <i class="fas fa-calendar-alt text-3xl text-purple-400 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">预约深度咨询</h4>
+                        <p class="text-gray-300 mb-2">60分钟战略规划通话</p>
+                        <p class="text-sm text-gray-400">资深顾问一对一服务</p>
+                        <button class="btn-purple mt-3 px-6 py-2 rounded-full text-sm font-bold bg-purple-500 hover:bg-purple-600 transition">
+                            立即预约
+                        </button>
                     </div>
                     
-                    <div class="contact-item">
-                        <i class="icon fas fa-map-marker-alt"></i>
-                        <h4 class="font-bold mb-2">访问我们</h4>
-                        <p class="text-gray-300">美国加利福尼亚州旧金山</p>
-                        <p class="text-sm text-gray-400">仅限预约</p>
+                    <div class="card p-6 text-center">
+                        <i class="fas fa-map-marker-alt text-3xl text-orange-400 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">办公地址</h4>
+                        <p class="text-gray-300 mb-2">中国香港 • 深圳 • 上海</p>
+                        <p class="text-sm text-gray-400">多地协同服务</p>
                     </div>
                     
-                    <!-- 社交链接 -->
-                    <div class="contact-item">
-                        <h4 class="font-bold mb-4">关注我们</h4>
-                        <div class="flex justify-center space-x-4">
-                            <a href="#" class="w-10 h-10 bg-orange-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
-                                <i class="fab fa-linkedin text-orange-400"></i>
+                    <div class="card p-6 text-center">
+                        <i class="fas fa-users text-3xl text-green-400 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">加入AI世界构建者社区</h4>
+                        <p class="text-gray-300 mb-4">与行业先锋者交流最新趋势</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="w-10 h-10 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-linkedin text-blue-400"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-blue-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
-                                <i class="fab fa-twitter text-blue-400"></i>
+                            <a href="#" class="w-10 h-10 bg-cyan-500 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-twitter text-cyan-400"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-purple-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
-                                <i class="fab fa-instagram text-purple-400"></i>
+                            <a href="#" class="w-10 h-10 bg-pink-500 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-instagram text-pink-400"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-red-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                            <a href="#" class="w-10 h-10 bg-red-500 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
                                 <i class="fab fa-youtube text-red-400"></i>
                             </a>
                         </div>
+                    </div>
+
+                    <!-- 紧急联系 -->
+                    <div class="evolution-card p-6 text-center">
+                        <i class="fas fa-phone text-2xl text-yellow-400 mb-3"></i>
+                        <h4 class="font-bold mb-2">紧急项目专线</h4>
+                        <p class="text-sm text-gray-300 mb-3">需要紧急启动项目？</p>
+                        <button class="btn-primary px-6 py-2 rounded-full text-sm font-bold">
+                            <i class="fas fa-bolt mr-1"></i>紧急咨询
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1629,85 +1891,105 @@
     </section>
 
     <!-- 页脚 -->
-    <footer class="bg-black py-12">
+    <footer class="bg-black py-16">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid lg:grid-cols-5 gap-8 mb-12">
                 <!-- 公司信息 -->
-                <div>
+                <div class="lg:col-span-2">
                     <div class="logo-container mb-6">
                         <div class="logo-icon">
-                            <span class="logo-symbol">能</span>
+                            <span class="logo-symbol">∞</span>
                         </div>
                         <div class="logo-text">
-                            <div class="logo-main">能力</div>
-                            <div class="logo-sub">有限公司</div>
+                            <div class="logo-main">能力有限公司</div>
+                            <div class="logo-sub">NENGLI.WORLD</div>
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-4">
-                        AI原生内容营销先锋。通过传统专业知识与尖端技术的完美融合，改变品牌命运。
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        AI时代品牌及IP世界构建商。通过传统专业知识与AI技术的深度融合，重新定义品牌与用户关系，从"能力有限"进化为"可能性无限"。
                     </p>
-                    <div class="flex space-x-3">
-                        <a href="#" class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
-                            <i class="fab fa-linkedin text-orange-400"></i>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition">
+                            <i class="fab fa-linkedin text-white"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
-                            <i class="fab fa-twitter text-blue-400"></i>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition">
+                            <i class="fab fa-twitter text-white"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 bg-purple-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
-                            <i class="fab fa-instagram text-purple-400"></i>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition">
+                            <i class="fab fa-youtube text-white"></i>
                         </a>
                     </div>
                 </div>
                 
-                <!-- 服务 -->
+                <!-- 核心产品 -->
                 <div>
-                    <h4 class="font-bold mb-4">服务</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#services" class="hover:text-orange-400 transition">智能内容工厂</a></li>
-                        <li><a href="#services" class="hover:text-orange-400 transition">营销大脑</a></li>
-                        <li><a href="#services" class="hover:text-orange-400 transition">超级IP孵化器</a></li>
-                        <li><a href="#pricing" class="hover:text-orange-400 transition">定制解决方案</a></li>
+                    <h4 class="font-bold mb-4 text-cyan-400">核心产品</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#products" class="hover:text-cyan-400 transition">品牌世界创建</a></li>
+                        <li><a href="#products" class="hover:text-cyan-400 transition">IP世界创建</a></li>
+                        <li><a href="#products" class="hover:text-cyan-400 transition">AI伴侣创建</a></li>
+                        <li><a href="#pricing" class="hover:text-cyan-400 transition">完整解决方案</a></li>
+                        <li><a href="#contact" class="hover:text-cyan-400 transition">战略咨询</a></li>
                     </ul>
                 </div>
                 
-                <!-- 公司 -->
+                <!-- 成功案例 -->
                 <div>
-                    <h4 class="font-bold mb-4">公司</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#about" class="hover:text-orange-400 transition">关于我们</a></li>
-                        <li><a href="#cases" class="hover:text-orange-400 transition">案例研究</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">职业机会</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">新闻与博客</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">合作伙伴</a></li>
+                    <h4 class="font-bold mb-4 text-purple-400">成功案例</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#cases" class="hover:text-purple-400 transition">香港AI国际电影节</a></li>
+                        <li><a href="#cases" class="hover:text-purple-400 transition">知识就是力量IP</a></li>
+                        <li><a href="#cases" class="hover:text-purple-400 transition">FENGLL时尚品牌</a></li>
+                        <li><a href="#cases" class="hover:text-purple-400 transition">悦悦活力计划</a></li>
+                        <li><a href="#cases" class="hover:text-purple-400 transition">更多案例</a></li>
                     </ul>
                 </div>
                 
-                <!-- 支持 -->
+                <!-- 公司信息 -->
                 <div>
-                    <h4 class="font-bold mb-4">支持</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#contact" class="hover:text-orange-400 transition">联系我们</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">帮助中心</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">隐私政策</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">服务条款</a></li>
-                        <li><a href="#" class="hover:text-orange-400 transition">Cookie政策</a></li>
+                    <h4 class="font-bold mb-4 text-orange-400">关于我们</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#evolution" class="hover:text-orange-400 transition">战略进化</a></li>
+                        <li><a href="#vision" class="hover:text-orange-400 transition">未来愿景</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">团队介绍</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">投资者关系</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">加入我们</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">新闻资讯</a></li>
                     </ul>
                 </div>
             </div>
             
+            <!-- 底部信息 -->
             <div class="border-t border-gray-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm">
-                        © 2025 能力有限公司。保留所有权利。
-                    </p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <span class="text-green-400 text-sm flex items-center">
-                            <i class="fas fa-circle mr-2" style="font-size: 6px;"></i>
-                            所有系统运行正常
-                        </span>
-                        <span class="text-gray-400 text-sm">
-                            用心制作于旧金山
-                        </span>
+                <div class="grid md:grid-cols-3 gap-6 items-center">
+                    <div class="text-gray-400 text-sm">
+                        <p>© 2025 能力有限公司（Nengli.World）</p>
+                        <p>保留所有权利</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="inline-flex items-center space-x-4 text-sm">
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">隐私政策</a>
+                            <span class="text-gray-600">|</span>
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">服务条款</a>
+                            <span class="text-gray-600">|</span>
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Cookie政策</a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-right">
+                        <div class="flex items-center justify-end space-x-4">
+                            <span class="text-green-400 text-sm flex items-center">
+                                <i class="fas fa-circle mr-2" style="font-size: 6px;"></i>
+                                全系统运行正常
+                            </span>
+                            <span class="text-gray-400 text-sm">
+                                从香港连接世界
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1734,7 +2016,7 @@
                     });
                 }
                 
-                // 如果移动菜单打开则关闭
+                // 关闭移动菜单
                 const mobileMenu = document.getElementById('mobileMenu');
                 mobileMenu.classList.remove('active');
             });
@@ -1750,7 +2032,7 @@
             }
         });
 
-        // 滚动时淡入动画
+        // 滚动动画
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1764,79 +2046,161 @@
             });
         }, observerOptions);
 
-        // 观察所有卡片
-        document.querySelectorAll('.card, .service-card, .status-card').forEach(card => {
-            card.classList.add('fade-in');
-            observer.observe(card);
+        // 观察需要动画的元素
+        document.querySelectorAll('.card, .evolution-card, .case-study-card, .price-card').forEach(element => {
+            element.classList.add('fade-in');
+            observer.observe(element);
         });
 
-        // 动态添加粒子
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDelay = Math.random() * 2 + 's';
+        // 动态粒子创建
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            particle.style.animationDuration = (8 + Math.random() * 4) + 's';
             
-            document.querySelector('.hero').appendChild(sparkle);
+            // 随机颜色
+            const colors = ['#06b6d4', '#8b5cf6', '#f59e0b', '#ef4444'];
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
             
-            // 动画结束后移除粒子
+            document.querySelector('.floating-particles').appendChild(particle);
+            
+            // 动画结束后移除
             setTimeout(() => {
-                sparkle.remove();
-            }, 2000);
+                if (particle.parentNode) {
+                    particle.remove();
+                }
+            }, 12000);
         }
 
         // 定期创建粒子
-        setInterval(createSparkle, 3000);
+        setInterval(createParticle, 2000);
 
-        // 表单提交
+        // 表单提交处理
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // 简单表单验证
+            const formData = new FormData(this);
             const requiredFields = this.querySelectorAll('[required]');
             let allValid = true;
             
+            // 验证必填字段
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     allValid = false;
                     field.style.borderColor = '#ef4444';
+                    field.style.boxShadow = '0 0 0 1px #ef4444';
                 } else {
-                    field.style.borderColor = '#6b7280';
+                    field.style.borderColor = '#06b6d4';
+                    field.style.boxShadow = '0 0 0 1px #06b6d4';
                 }
             });
             
             if (allValid) {
-                // 显示成功消息
-                alert('感谢您的兴趣！我们将在24小时内联系您。');
-                this.reset();
+                // 显示提交中状态
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>提交中...';
+                submitBtn.disabled = true;
+                
+                // 模拟提交过程
+                setTimeout(() => {
+                    // 显示成功消息
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-50';
+                    successDiv.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3"></i>
+                            <div>
+                                <div class="font-bold">提交成功！</div>
+                                <div class="text-sm">我们将在24小时内与您联系</div>
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(successDiv);
+                    
+                    // 重置表单
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // 移除成功消息
+                    setTimeout(() => {
+                        successDiv.remove();
+                    }, 5000);
+                }, 2000);
             } else {
-                alert('请填写所有必填字段。');
-            }
-        });
-
-        // 通讯订阅
-        document.querySelector('.newsletter-section form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            
-            if (email) {
-                alert('感谢您的订阅！请查看您的邮箱确认邮件。');
-                this.reset();
-            }
-        });
-
-        // 按钮加载状态
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                const originalText = this.textContent;
-                this.textContent = '加载中...';
-                this.disabled = true;
+                // 显示错误消息
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50';
+                errorDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-circle mr-3"></i>
+                        <div>
+                            <div class="font-bold">请填写所有必填字段</div>
+                            <div class="text-sm">标有*的字段为必填项</div>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(errorDiv);
                 
                 setTimeout(() => {
-                    this.textContent = originalText;
-                    this.disabled = false;
-                }, 1000);
+                    errorDiv.remove();
+                }, 5000);
+            }
+        });
+
+        // 添加按钮悬停效果
+        document.querySelectorAll('button, .btn-primary, .btn-infinite').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有卡片添加初始动画延迟
+            const cards = document.querySelectorAll('.card, .evolution-card, .case-study-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = (index * 0.1) + 's';
+            });
+            
+            // 启动Logo动画
+            const logoIcon = document.querySelector('.logo-icon');
+            if (logoIcon) {
+                setInterval(() => {
+                    logoIcon.style.transform = 'rotate(360deg) scale(1.1)';
+                    setTimeout(() => {
+                        logoIcon.style.transform = 'rotate(0deg) scale(1)';
+                    }, 1000);
+                }, 10000);
+            }
+        });
+
+        // 监听滚动事件，为导航添加活跃状态
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-cyan-400');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('text-cyan-400');
+                }
             });
         });
     </script>
